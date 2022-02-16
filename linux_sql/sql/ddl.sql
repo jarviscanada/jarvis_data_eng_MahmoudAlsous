@@ -20,6 +20,6 @@ CREATE TABLE IF NOT EXISTS PUBLIC.host_usage(
      disk_io int NOT NULL,
      disk_available int NOT NULL,
      FOREIGN KEY (host_id) REFERENCES host_info(id)
-)
+);
 
 
