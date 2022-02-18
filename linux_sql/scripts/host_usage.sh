@@ -13,6 +13,7 @@ if [ $# -ne 5 ]; then
     exit 1
 fi
 
+# Saving commands to variables
 lscpu_out=$(lscpu)
 vmstat_mb=$(vmstat --unit M)
 mem_out=$(cat /proc/meminfo)
