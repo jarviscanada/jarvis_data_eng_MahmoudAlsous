@@ -47,7 +47,7 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng_MahmoudAls
 
 ## Education
 **Carleton University (2017-2021)**, Bachelor of Engineering (Computer Systems Engineering), Computer Engineering
-- Scholarship
+- Entrance Scholarship
 - Dean's Honour List (2020, 2021): Obtained a GPA over 10.0(3.7).
 - GPA: 3.0/4.0
 
