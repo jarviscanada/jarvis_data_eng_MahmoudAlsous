@@ -1,56 +1,38 @@
 package ca.jrvs.apps.practice;
-import java.util.regex.*;
 
 public class RegexExcImp implements RegexExc{
 
     public boolean matchJpeg(String filename){
-        String name = ".+(\\.jpg)$\n" +
-                ".+(\\.jpeg)$";
-
-        Pattern p = Pattern.compile(name);
-
-        if (filename == null) {
+        if ( filename.toLowerCase().matches("[^\\s]+(\\.(jpg|jpeg)$)")) {
+            return true;
+        }
+        else{
             return false;
         }
-
-        Matcher m = p.matcher(filename);
-
-        return m.matches();
     }
 
     public boolean matchIp(String ip){
-        String zeroTo255
-                = "(\\d{1,2}|(0|1)\\"
-                + "d{2}|2[0-4]\\d|25[0-5])";
-
-        String regex
-                = zeroTo255 + "\\."
-                + zeroTo255 + "\\."
-                + zeroTo255 + "\\."
-                + zeroTo255;
-
-        Pattern p = Pattern.compile(regex);
-
-        if (ip == null) {
+        if( ip.matches("^\\d{1,3}.\\d{1,3}.\\d{1,3}.\\d{1,3}$") ) {
+            return true;
+        }
+        else {
             return false;
         }
-
-        Matcher m = p.matcher(ip);
-
-        return m.matches();
     }
 
     public boolean isEmptyLine(String line){
-        String empty = "^\\s*$";
-
-        Pattern p = Pattern.compile(empty);
-
-        if (line == null) {
+        if( line.matches("\\s*$") ) {
+            return true;
+        }
+        else{
             return false;
         }
+    }
 
-        Matcher m = p.matcher(line);
-
-        return m.matches();
+    public static void main(String args[]){
+        RegexExcImp rg=new RegexExcImp();
+        System.out.println(rg.matchJpeg("abc.jpg"));
+        System.out.println(rg.matchIp("192.168.0.1"));
+        System.out.println(rg.isEmptyLine(""));
     }
 }
