@@ -3,12 +3,103 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.apache.log4j.BasicConfigurator;
 
+import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
+
 public class JavaGrepImp implements JavaGrep {
     final Logger logger = LoggerFactory.getLogger(JavaGrep.class);
 
     private String regex;
     private String rootPath;
     private String outFile;
+
+    @Override
+    public void process() throws IOException {
+        ArrayList<String> matchedLines = new ArrayList<String>();
+        for (File file : listFiles(getRootPath())){
+            for (String line : readLines(file)){
+                if (containsPattern(line)){
+                    matchedLines.add(line);
+                }
+            }
+        }
+        writeToFile((matchedLines));
+    }
+
+    @Override
+    public List<File> listFiles(String rootDir) {
+        File file = new File(rootDir);
+        List<File> allFiles = new ArrayList<File>();
+        for(File temp: file.listFiles()){
+            allFiles.add(temp);
+        }
+        return allFiles;
+    }
+
+    @Override
+    public List<String> readLines(File inputFile) {
+        List<String> lines = new ArrayList<String>();
+        try {
+            BufferedReader reader = new BufferedReader(new FileReader(inputFile));
+            String line = reader.readLine();
+            while (line != null) {
+                lines.add(line);
+                line = reader.readLine();
+            }
+            reader.close();
+        } catch (IOException e) {
+            logger.error("Error: Failed to read file", e);
+        }
+        return lines;
+    }
+
+    @Override
+    public boolean containsPattern(String line) {
+        return line.matches(regex);
+    }
+
+    @Override
+    public void writeToFile(List<String> lines) throws IOException {
+        File file = new File("out.txt");
+        FileOutputStream fos = new FileOutputStream(file);
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(fos));
+        for (String line: lines){
+            bw.write(line);
+            bw.newLine();
+        }
+        bw.close();
+    }
+
+    @Override
+    public String getRootPath() {
+        return rootPath;
+    }
+
+    @Override
+    public void setRootPath(String rootPath) {
+        this.rootPath = rootPath;
+    }
+
+    @Override
+    public String getRegex() {
+        return regex;
+    }
+
+    @Override
+    public void setRegex(String regex) {
+        this.regex = regex;
+    }
+
+    @Override
+    public String getOutFile() {
+        return outFile;
+    }
+
+    @Override
+    public void setOutFile(String outFile) {
+        this.outFile = outFile;
+    }
 
     public static void main(String[] args) {
         if (args.length != 3) {
