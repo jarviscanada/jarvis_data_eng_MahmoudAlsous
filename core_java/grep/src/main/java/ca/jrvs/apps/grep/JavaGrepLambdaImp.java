@@ -3,6 +3,7 @@ package ca.jrvs.apps.grep;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
@@ -56,10 +57,13 @@ public class JavaGrepLambdaImp extends JavaGrepImp {
      */
     @Override
     public List<File> listFiles(String rootDir){
-        File file = new File(rootDir);
-        List<File> fileList = new ArrayList<File>();
-        file.listFiles(f -> fileList.add(f));
+        List<File> files = new ArrayList<>();
 
-        return fileList;
+        try {
+            files = Files.list(Paths.get(rootDir)).filter(Files::isRegularFile).map(Path::toFile).collect(Collectors.toList());
+        } catch (IOException ex) {
+            logger.error("Error: rootDir is not found", ex);
+        }
+        return files;
     }
 }
