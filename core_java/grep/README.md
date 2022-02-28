@@ -58,5 +58,5 @@ https://hub.docker.com/r/grepdocker/grep
 
 # Improvement
 - Updating the methods in the interface to return streams rather than lists for more memory usage optimization.
-- Adding more information on the matched strings such as the location of the file and string location in the file
+- Adding more information on the matched strings such as the location of the file and string location in the file.
 - Adding more error handling and method exceptions.
