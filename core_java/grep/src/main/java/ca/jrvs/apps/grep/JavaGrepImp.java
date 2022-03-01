@@ -1,8 +1,8 @@
 package ca.jrvs.apps.grep;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.apache.log4j.BasicConfigurator;
-
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -31,8 +31,16 @@ public class JavaGrepImp implements JavaGrep {
     public List<File> listFiles(String rootDir) {
         File file = new File(rootDir);
         List<File> allFiles = new ArrayList<File>();
-        for(File temp: file.listFiles()){
-            allFiles.add(temp);
+
+        if(file.listFiles() != null){
+            for(File temp: file.listFiles()){
+                if(temp.isFile()){
+                    allFiles.add(temp);
+                }
+                else{
+                    allFiles.addAll(listFiles(temp.getAbsolutePath()));
+                }
+            }
         }
         return allFiles;
     }
@@ -41,13 +49,14 @@ public class JavaGrepImp implements JavaGrep {
     public List<String> readLines(File inputFile) {
         List<String> lines = new ArrayList<String>();
         try {
-            BufferedReader reader = new BufferedReader(new FileReader(inputFile));
-            String line = reader.readLine();
-            while (line != null) {
+            BufferedReader bufferedReader = new BufferedReader(new FileReader(inputFile));
+            String line = bufferedReader.readLine();
+
+            while(line!=null){
                 lines.add(line);
-                line = reader.readLine();
+                line = bufferedReader.readLine();
             }
-            reader.close();
+            bufferedReader.close();
         } catch (IOException e) {
             logger.error("Error: Failed to read file", e);
         }
@@ -61,7 +70,7 @@ public class JavaGrepImp implements JavaGrep {
 
     @Override
     public void writeToFile(List<String> lines) throws IOException {
-        File file = new File("out.txt");
+        File file = new File(getOutFile());
         FileOutputStream fos = new FileOutputStream(file);
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(fos));
         for (String line: lines){
