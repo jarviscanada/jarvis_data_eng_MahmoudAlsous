@@ -11,7 +11,7 @@ Technologies used:
 
 # Implementaiton
 ## ER Diagram
-![image](https://github.com/jarviscanada/jarvis_data_eng_MahmoudAlsous/blob/feature/README/core_java/jdbc/assets/JDBC%20ER%20Diagram.png)
+![image](https://github.com/jarviscanada/jarvis_data_eng_MahmoudAlsous/blob/develop/core_java/jdbc/assets/JDBC%20ER%20Diagram.png)
 
 ## Design Patterns
 DAO essentially allows us to seperate the application logic from the business logic, usually through a relational database. When using a DAO as a pure abstraction layer, it is recommended to include a DTO which provide a single set of fully encapsulated objects such as tables. DAOs typically process multiple DTOs, hence having fewer statements. On the other hand, repository patterns focus on single-table access per class. They are more suited for distributed systems as they also perform join operations for the code itself rather than joining them from the database. If the application is constrained by the database, repository patterns have the advantage since they do not require the database to do joins. Otherwise, DAOs work better for highly normalized systems because their joins are simplified.
