@@ -19,9 +19,9 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng_MahmoudAls
 
 **Core Java Apps** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_MahmoudAlsous/tree/master/core_java)]:
       
-  - Grep App: Designed a Java Grep Application that mimics the functionality of the Linux grep command, which searchings files in a certain directory and matches given strings to the text in the files. The app utilizes Regex, Lambda and Stream APIs, and Maven. The application was tested using JUnit Testing and main method. and was enclosed in a Docker container.
-  - JDBC App: Developed a JDBC application that allows users to establish a connection between a Java app and a PostgreSQL database. The application can perform multiple tasks directly to the database using a CRUD methodology (Create, Read, Update, and Delete). This application was implemented with Maven, SQL, Java, DAO, DTO, JDBC, Docker, and PSQL. A JDBC Executer class was implemented with a main method to manually test the application and Docker was used to contain the program.
-  - Twitter App: In Progress.
+  - **Grep App**: Designed a Java Grep Application that mimics the functionality of the Linux grep command, which searchings files in a certain directory and matches given strings to the text in the files. The app utilizes Regex, Lambda and Stream APIs, and Maven. The application was tested using JUnit Testing and main method. and was enclosed in a Docker container.
+  - **JDBC App**: Developed a JDBC application that allows users to establish a connection between a Java app and a PostgreSQL database. The application can perform multiple tasks directly to the database using a CRUD methodology (Create, Read, Update, and Delete). This application was implemented with Maven, SQL, Java, DAO, DTO, JDBC, Docker, and PSQL. A JDBC Executer class was implemented with a main method to manually test the application and Docker was used to contain the program.
+  - **Twitter App**: In Progress.
 
 
 ## Highlighted Projects
