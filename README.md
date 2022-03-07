@@ -8,7 +8,7 @@ I am a Computer Systems Engineerng graduate from Carleton University who is look
 
 **Competent:** C/C++, Python, C#, MATLAB, Verilog
 
-**Familiar:** Dart Language, IntelliJ IDEA, Raspberry Pi GPIO, Machine Learning, Google Cloud Platform
+**Familiar:** Maven, IntelliJ IDEA, JUnit, Machine Learning, Docker
 
 ## Jarvis Projects
 
@@ -19,19 +19,9 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng_MahmoudAls
 
 **Core Java Apps** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_MahmoudAlsous/tree/master/core_java)]:
       
+  - Grep App: Designed a Java Grep Application that mimics the functionality of the Linux grep command, which searchings files in a certain directory and matches given strings to the text in the files. The app utilizes Regex, Lambda and Stream APIs, and Maven. The application was tested using JUnit Testing and main method. and was enclosed in a Docker container.
+  - JDBC App: Developed a JDBC application that allows users to establish a connection between a Java app and a PostgreSQL database. The application can perform multiple tasks directly to the database using a CRUD methodology (Create, Read, Update, and Delete). This application was implemented with Maven, SQL, Java, DAO, DTO, JDBC, Docker, and PSQL. A JDBC Executer class was implemented with a main method to manually test the application and Docker was used to contain the program.
   - Twitter App: In Progress.
-  - JDBC App: In Progress.
-  - Grep App: In Progress.
-
-**Springboot App** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_MahmoudAlsous/tree/master/springboot)]: Not Started
-
-**Python Data Analytics** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_MahmoudAlsous/tree/master/python_data_anlytics)]: Not Started
-
-**Hadoop** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_MahmoudAlsous/tree/master/hadoop)]: Not Started
-
-**Spark** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_MahmoudAlsous/tree/master/spark)]: Not Started
-
-**Cloud/DevOps** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_MahmoudAlsous/tree/master/cloud_devops)]: Not Started
 
 
 ## Highlighted Projects
