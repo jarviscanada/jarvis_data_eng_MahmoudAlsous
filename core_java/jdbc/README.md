@@ -1,5 +1,5 @@
 # Introduction
-This app is part of the core_java project and it is designed to exercise JDBC techniques in a connected PostgreSQL database. The java application uses Maven to build the projects using required dependencies. To connect to the database, JDBC implements a Data Access Object and a Data Transfer Object to allow us to create customized funcitons that process SQL queries to manage tables in the database such as update, delete, and create etc. This project contains two DAO implemented classes CustomerDAO and OrderDAO, with CRUD funcitonality. This project was done with sql scripts that were provided by Linkedin Learning.
+This app is part of the core_java project and it is designed to exercise JDBC techniques in a connected PostgreSQL database. The java application uses Maven to build the projects using required dependencies. To connect to the database, JDBC implements a Data Access Object and a Data Transfer Object to allow us to create customized functions that process SQL queries to manage tables in the database such as update, delete, and create etc. This project contains two DAO implemented classes CustomerDAO and OrderDAO, with CRUD functionality. This project was done with SQL scripts that were provided by Linkedin Learning.
 
 Technologies used:
 - Java
