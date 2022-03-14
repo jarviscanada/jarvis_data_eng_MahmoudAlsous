@@ -3,7 +3,7 @@ package ca.jrvs.practice.codingChallenge;
 import java.util.Stack;
 
 /**
- * https://www.notion.so/jarvisdev/Valid-Parentheses-70b67d0d438344ce82c441d1eeee1dc8
+ * Ticket: https://www.notion.so/jarvisdev/Valid-Parentheses-70b67d0d438344ce82c441d1eeee1dc8
  */
 
 public class ValidParentheses {
