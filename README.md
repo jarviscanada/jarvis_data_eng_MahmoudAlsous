@@ -1,14 +1,14 @@
 # Mahmoud Al Sous . Jarvis Consulting
 
-I am a Computer Systems Engineerng graduate from Carleton University who is looking to kickstart my career in the software development engineering industry. Currently, I am training under Jarvis as a Software Development Engineer in order to get placed with a Jarvis Client in the future. Through my undergrad progra, I obtained strong programming skills, learned about Networking and Cybersecurity, and gained an understanding of the computer architecture. I am fascinated by the ever changing software industry because it is always allowing us to fix problems that impact our society for the better and I would like to use my problem solving skills to be involved in projects that improve our software systems.
+I am a Computer Systems Engineerng graduate from Carleton University who is looking to kickstart my career in the software development engineering industry. Currently, I am training under Jarvis as a Software Development Engineer in order to get placed with a Jarvis Client in the future. Through my undergraduate program, I obtained strong programming skills, learned about Networking and Cybersecurity, and gained an understanding of the computer architecture. I am fascinated by the ever changing software industry because it is always allowing us to fix problems that impact our society for the better and I would like to use my problem solving skills to be involved in projects that improve our software systems.
 
 ## Skills
 
 **Proficient:** Java, Linux/Bash, RDBMS/SQL, Agile/Scrum, Git
 
-**Competent:** C/C++, Python, C#, MATLAB, Verilog
+**Competent:** C/C++, Python, C#, MATLAB, JUnit
 
-**Familiar:** Maven, IntelliJ IDEA, JUnit, Machine Learning, Docker
+**Familiar:** Maven, IntelliJ IDEA, Verilog, Machine Learning, Docker
 
 ## Jarvis Projects
 
