@@ -3,9 +3,9 @@ CREATE SEQUENCE hp_orderline_seq start with 10000;
 
 CREATE TABLE orders (
   order_id bigint NOT NULL DEFAULT nextval('hp_order_seq'),
-  creation_date timestamp DEFAULT NULL,
-  total_due numeric(10,2) DEFAULT NULL,
-  status varchar(50) DEFAULT NULL,
+  creation_date timestamp,
+  total_due numeric(10,2),
+  status varchar(50),
   customer_id bigint NOT NULL,
   salesperson_id bigint NOT NULL,
   PRIMARY KEY (order_id),
@@ -17,7 +17,7 @@ CREATE TABLE order_item (
   order_item_id bigint NOT NULL DEFAULT nextval('hp_orderline_seq'),
   order_id bigint NOT NULL,
   product_id bigint NOT NULL,
-  quantity int DEFAULT NULL,
+  quantity int,
   PRIMARY KEY (order_item_id),
   FOREIGN KEY (order_id) REFERENCES orders(order_id),
   FOREIGN KEY (product_id) REFERENCES product(product_id)

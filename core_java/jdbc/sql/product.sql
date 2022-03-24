@@ -2,12 +2,12 @@ CREATE SEQUENCE hp_product_seq start with 10000;
 
 CREATE TABLE product (
   product_id bigint NOT NULL DEFAULT nextval('hp_product_seq'),
-  code varchar(50) DEFAULT NULL,
-  name varchar(50) DEFAULT NULL,
-  size int DEFAULT NULL,
-  variety varchar(50) DEFAULT NULL,
-  price numeric(10,2) DEFAULT NULL,
-  status varchar(50) DEFAULT NULL,
+  code varchar(50),
+  name varchar(50),
+  size int,
+  variety varchar(50),
+  price numeric(10,2),
+  status varchar(50),
   PRIMARY KEY (product_id)
 );
 
