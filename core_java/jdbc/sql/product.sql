@@ -1,7 +1,5 @@
-CREATE SEQUENCE hp_product_seq start with 10000;
-
 CREATE TABLE product (
-  product_id bigint NOT NULL DEFAULT nextval('hp_product_seq'),
+  product_id SERIAL NOT NULL,
   code varchar(50),
   name varchar(50),
   size int,
@@ -10,8 +8,6 @@ CREATE TABLE product (
   status varchar(50),
   PRIMARY KEY (product_id)
 );
-
-ALTER SEQUENCE hp_product_seq OWNED BY product.product_id;
 
 INSERT INTO product (product_id, code, name, size, variety, price, status)
 VALUES
