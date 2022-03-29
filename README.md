@@ -31,7 +31,7 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng_MahmoudAls
 
 ## Professional Experiences
 
-**Software Developer, Jarvis (2022-present)**: Designed a tank shooter game that allows each player to use an application on their mobile device to control their tank. I developed the application through flutter to build an interaction between the app and the Arduino board on the tank. The app sends coordinates to the Arduino through Bluetooth UART, which allows the Arduino to control the servo motors installed on the tanks. I was also in charge of developing a database which connects to the IR sensors on the tanks to record when any tank is hit by the other for score keeping.
+**Software Developer, Jarvis (2022-present)**: Implemented multiple applications using the Agile methodology. Participated in organizing and leading daily scrum meetings with the development team as well as scrum retrospective meetings to go over the last scrum period and how to improve on the project. Throughout the development process, I used Java, Linux, Docker, SQL, and bash scripts to complete the projects. I was able to gain some team collaboration skills through using the scrum boards when managing the sprint backlogs. I was able to utilize and improve my problem-solving skills by working on the tasks and coding challenges that are part of the projects. Most importantly, the development process ensured that I learned the core concepts of every technical aspect of the assignments, and I was able to use my prior experience to help me complete the tasks.
 
 
 ## Education
