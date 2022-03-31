@@ -1,6 +1,5 @@
-package ca.jrvs.apps.twitter;
+package ca.jrvs.apps.twitter.dao;
 
-import ca.jrvs.apps.twitter.dao.TwitterDao;
 import ca.jrvs.apps.twitter.dao.helper.HttpHelper;
 import ca.jrvs.apps.twitter.dao.helper.JsonUtil;
 import ca.jrvs.apps.twitter.dao.helper.TweetUtil;

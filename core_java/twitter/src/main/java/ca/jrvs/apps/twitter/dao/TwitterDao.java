@@ -93,7 +93,7 @@ public class TwitterDao implements CrdDao<Tweet, String> {
         return new URI(uriString);
     }
 
-    private Tweet parseResponseBody(HttpResponse response, Integer expectedStatusCode) {
+     public Tweet parseResponseBody(HttpResponse response, Integer expectedStatusCode) {
         Tweet tweet = null;
 
         //Check response status
