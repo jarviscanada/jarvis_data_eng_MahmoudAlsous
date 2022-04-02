@@ -27,7 +27,7 @@ public class TwitterDaoUnitTest {
     @Test
     public void showTweet() throws Exception {
         //test failed request
-        Mockito.lenient().when(mockHelper.httpGet(isNotNull())).thenThrow(new RuntimeException("mock"));
+        lenient().when(mockHelper.httpGet(isNotNull())).thenThrow(new RuntimeException("mock"));
         try {
             dao.findById("1507842133453062147");
             fail();
@@ -53,13 +53,13 @@ public class TwitterDaoUnitTest {
                 + "}";
 
         when(mockHelper.httpPost(isNotNull())).thenReturn(null);
-        TwitterDao spyDao = Mockito.spy(dao);
+        TwitterDao spyDao = spy(dao);
         Tweet expectedTweet = JsonUtil.toObjectFromJson(tweetJsonStr, Tweet.class);
         //Mock the parseResponseBody method
         doReturn(expectedTweet).when(spyDao).parseResponseBody(any(),anyInt());
         Tweet tweet = spyDao.findById("1507842133453062147");
         assertNotNull(tweet);
-        assertEquals("1507842133453062147", tweet.getId_str());
+        assertEquals("1507842133453062147", tweet.getIdString());
         assertNotNull(tweet.getText());
     }
 
@@ -137,7 +137,7 @@ public class TwitterDaoUnitTest {
         doReturn(expectedTweet).when(spyDao).parseResponseBody(any(), anyInt());
         Tweet tweet = spyDao.deleteById("1507842133453062147");
         assertNotNull(tweet);
-        assertEquals("1507842133453062147", tweet.getId_str());
+        assertEquals("1507842133453062147", tweet.getIdString());
         assertNotNull(tweet.getText());
     }
 }

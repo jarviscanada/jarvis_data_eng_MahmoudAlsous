@@ -22,10 +22,8 @@ public class TwitterDaoIntTest {
         String consumerSecret = System.getenv("consumerSecret");
         String accessToken = System.getenv("accessToken");
         String tokenSecret = System.getenv("tokenSecret");
-        System.out.println(consumerKey + " | " + consumerSecret + " | "
-                + accessToken + " | " + tokenSecret);
-        HttpHelper httpHelper = new TwitterHttpHelper(consumerKey, consumerSecret,
-                accessToken, tokenSecret);
+        System.out.println(consumerKey + " | " + consumerSecret + " | " + accessToken + " | " + tokenSecret);
+        HttpHelper httpHelper = new TwitterHttpHelper(consumerKey, consumerSecret, accessToken, tokenSecret);
         twitterDAO = new TwitterDao(httpHelper);
     }
 
@@ -40,7 +38,7 @@ public class TwitterDaoIntTest {
 
         Tweet tweet = twitterDAO.create(postTweet);
         System.out.println(JsonUtil.toPrettyJson(tweet));
-        TwitterDaoIntTest.id = tweet.getId_str();
+        TwitterDaoIntTest.id = tweet.getIdString();
         TwitterDaoIntTest.text = tweet.getText();
 
         Assert.assertEquals(text, tweet.getText());
