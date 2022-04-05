@@ -68,7 +68,7 @@ public class TwitterController implements Controller {
         }
 
         String id = args[1];
-        String[] fields = null;
+        String[] fields;
         if (args.length == 2){
             fields = new String[0];
         }

@@ -59,11 +59,11 @@ public class Tweet {
         this.id = id;
     }
 
-    public String getIdString() {
+    public String getId_str() {
         return id_str;
     }
 
-    public void setIdString(String id_str) {
+    public void setId_str(String id_str) {
         this.id_str = id_str;
     }
 

@@ -38,7 +38,7 @@ public class TwitterDaoIntTest {
 
         Tweet tweet = twitterDAO.create(postTweet);
         System.out.println(JsonUtil.toPrettyJson(tweet));
-        TwitterDaoIntTest.id = tweet.getIdString();
+        TwitterDaoIntTest.id = tweet.getId_str();
         TwitterDaoIntTest.text = tweet.getText();
 
         Assert.assertEquals(text, tweet.getText());

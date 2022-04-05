@@ -36,10 +36,10 @@ public class TwitterServiceUnitTest {
     public void showTweet() {
         String[] fields = {"id", "text"};
         Tweet test = new Tweet();
-        test.setIdString("1010");
+        test.setId_str("1010");
         test.setText("Sample text");
         when(dao.findById(any())).thenReturn(test);
-        Tweet tweet = service.showTweet(test.getIdString(), fields);
+        Tweet tweet = service.showTweet(test.getId_str(), fields);
         assertEquals("Sample text", tweet.getText());
     }
 

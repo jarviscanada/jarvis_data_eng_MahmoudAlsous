@@ -59,7 +59,7 @@ public class TwitterDaoUnitTest {
         doReturn(expectedTweet).when(spyDao).parseResponseBody(any(),anyInt());
         Tweet tweet = spyDao.findById("1507842133453062147");
         assertNotNull(tweet);
-        assertEquals("1507842133453062147", tweet.getIdString());
+        assertEquals("1507842133453062147", tweet.getId_str());
         assertNotNull(tweet.getText());
     }
 
@@ -137,7 +137,7 @@ public class TwitterDaoUnitTest {
         doReturn(expectedTweet).when(spyDao).parseResponseBody(any(), anyInt());
         Tweet tweet = spyDao.deleteById("1507842133453062147");
         assertNotNull(tweet);
-        assertEquals("1507842133453062147", tweet.getIdString());
+        assertEquals("1507842133453062147", tweet.getId_str());
         assertNotNull(tweet.getText());
     }
 }

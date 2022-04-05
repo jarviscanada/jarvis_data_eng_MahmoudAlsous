@@ -10,8 +10,7 @@ import org.junit.Test;
 
 import java.util.List;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.*;
 
 public class TwitterControllerIntTest {
 
@@ -19,12 +18,12 @@ public class TwitterControllerIntTest {
 
     @Before
     public void setup() throws Exception {
-        String CONSUMER_KEY = System.getenv("consumerKey");
-        String CONSUMER_SECRET = System.getenv("consumerSecret");
-        String ACCESS_TOKEN = System.getenv("accessToken");
-        String TOKEN_SECRET = System.getenv("tokenSecret");
+        String consumerKey = System.getenv("consumerKey");
+        String consumerSecret = System.getenv("consumerSecret");
+        String accessToken = System.getenv("accessToken");
+        String tokenSecret = System.getenv("tokenSecret");
 
-        TwitterHttpHelper helper = new TwitterHttpHelper(CONSUMER_KEY,CONSUMER_SECRET,ACCESS_TOKEN,TOKEN_SECRET);
+        TwitterHttpHelper helper = new TwitterHttpHelper(consumerKey,consumerSecret,accessToken,tokenSecret);
         TwitterDao dao = new TwitterDao(helper);
         Service service = new TwitterService(dao);
         twitterController = new TwitterController(service);
@@ -55,17 +54,9 @@ public class TwitterControllerIntTest {
         String[] args = new String[]{"post",text,coords};
         Tweet postTweet= twitterController.postTweet(args);
 
-        // Call showTweet without fields arg
-        String[] showArgs = new String[]{"show", postTweet.getIdString()};
-        Tweet showTweet = twitterController.showTweet(showArgs);
-
-        assertEquals(showTweet.getText(),postTweet.getText());
-        assertEquals(showTweet.getCoordinates().getCoordinates().get(0), postTweet.getCoordinates().getCoordinates().get(0));
-        assertEquals(showTweet.getCoordinates().getCoordinates().get(1), postTweet.getCoordinates().getCoordinates().get(1));
-
-        String[] fieldsArgs = new String[]{"show", postTweet.getIdString(), text};
-        showTweet= twitterController.showTweet(fieldsArgs);
-        assertNotNull(showTweet.getText());
+        String[] fieldsArgs = new String[]{"show", postTweet.getId_str(), "text"};
+        Tweet showTweet = twitterController.showTweet(fieldsArgs);
+        assertEquals(postTweet.getText(), showTweet.getText());
     }
 
     @Test
@@ -78,7 +69,7 @@ public class TwitterControllerIntTest {
         String[] args = new String[]{"post", text, coords};
         Tweet postTweet= twitterController.postTweet(args);
 
-        String[] deleteArgs = new String[]{"delete", postTweet.getIdString()};
+        String[] deleteArgs = new String[]{"delete", postTweet.getId_str()};
         List<Tweet> deletedTweets= twitterController.deleteTweet(deleteArgs);
         assertEquals(text, deletedTweets.get(0).getText());
     }

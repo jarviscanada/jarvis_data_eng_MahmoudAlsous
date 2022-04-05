@@ -59,7 +59,7 @@ public class TwitterDao implements CrdDao<Tweet, String> {
         HttpResponse response;
         try {
             String uriString = API_BASE_URI + SHOW_PATH + QUERY_SYM + "id" + EQUAL + s;
-            response = httpHelper.httpPost(new URI(uriString));
+            response = httpHelper.httpGet(new URI(uriString));
         } catch (URISyntaxException e) {
             throw new IllegalArgumentException("Invalid input", e);
         }
