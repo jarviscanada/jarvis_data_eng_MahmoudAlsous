@@ -9,6 +9,7 @@ import java.util.List;
 
 import static ca.jrvs.apps.twitter.dao.helper.TweetUtil.buildTweet;
 
+@org.springframework.stereotype.Controller
 public class TwitterController implements Controller {
 
     private static final String COORD_SEP = ":";
