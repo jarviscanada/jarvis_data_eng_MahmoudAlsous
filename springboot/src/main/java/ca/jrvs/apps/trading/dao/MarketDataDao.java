@@ -31,7 +31,7 @@ import java.util.Optional;
 @Repository
 public class MarketDataDao implements CrudRepository<IexQuote, String> {
 
-    private static final String IEX_BATCH_PATH = "/stock/market/batch?symbols=%s&types=quote&token=";
+    private static final String IEX_BATCH_PATH = "/stock/market/batch?types=quote&token=";
     private String IEX_BATCH_URL = "";
 
     private Logger logger = LoggerFactory.getLogger(MarketDataDao.class);

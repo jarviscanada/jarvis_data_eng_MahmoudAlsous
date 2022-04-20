@@ -1,4 +1,4 @@
-package java.ca.jrvs.apps.trading.dao;
+package ca.jrvs.apps.trading.dao;
 
 import ca.jrvs.apps.trading.dao.MarketDataDao;
 import ca.jrvs.apps.trading.model.config.MarketDataConfig;
@@ -7,11 +7,10 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
 import org.apache.http.impl.conn.PoolingHttpClientConnectionManager;
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.fail;
+import static org.junit.Assert.*;
 
 public class MarketDataDaoIntTest {
 
@@ -33,14 +32,14 @@ public class MarketDataDaoIntTest {
     public void findIexQuotesByTickers() throws IOException {
         //happy path
         List<IexQuote> quoteList = dao.findAllById(Arrays.asList("AAPL", "FB"));
-        Assert.assertEquals(2, quoteList.size());
-        Assert.assertEquals("AAPL", quoteList.get(0).getSymbol());
+        assertEquals(2, quoteList.size());
+        assertEquals("AAPL", quoteList.get(0).getSymbol());
 
         //sad path
         try {
-            dao.findAllById(Arrays.asList("AAPL", "FB"));
+            dao.findAllById(Arrays.asList("AAPL", "FB2"));
         } catch (IllegalArgumentException e) {
-            Assert.assertTrue(true);
+            assertTrue(true);
         } catch (Exception e) {
             fail();
         }
@@ -50,6 +49,6 @@ public class MarketDataDaoIntTest {
     public void findByTicker() {
         String ticker = "AAPL";
         IexQuote iexQuote = dao.findById(ticker).get();
-        Assert.assertEquals(ticker, iexQuote.getSymbol());
+        assertEquals(ticker, iexQuote.getSymbol());
     }
 }
