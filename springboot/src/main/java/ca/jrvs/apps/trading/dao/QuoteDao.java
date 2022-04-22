@@ -102,7 +102,7 @@ public class QuoteDao implements CrudRepository<Quote, String> {
     @Override
     public Optional<Quote> findById(String ticker) {
         String query = "SELECT * FROM " + TABLE_NAME + " WHERE " + ID_COLUMN_NAME + "=?";
-        Optional<Quote> quote = null;
+        Optional<Quote> quote = Optional.empty();
         try {
             quote = Optional.ofNullable(
                     jdbcTemplate.queryForObject(query, BeanPropertyRowMapper.newInstance(Quote.class),
@@ -138,12 +138,15 @@ public class QuoteDao implements CrudRepository<Quote, String> {
      * @throws org.springframework.dao.DataAccessException if failed to update
      */
     @Override
-    public Iterable<Quote> findAll() {
+    public List<Quote> findAll() {
         String query = "SELECT * FROM " + TABLE_NAME;
+        List<Quote> quoteList = new ArrayList<>();
         try {
-            List<Quote> quotes = jdbcTemplate.query(query,
-                    BeanPropertyRowMapper.newInstance(Quote.class));
-            return quotes;
+            List<Quote> quotes = jdbcTemplate.query(query, BeanPropertyRowMapper.newInstance(Quote.class));
+            for(Quote quote:quotes){
+                quoteList.add(quote);
+            }
+            return quoteList;
         } catch (DataAccessException e) {
             throw new DataRetrievalFailureException("Can not get the value from database", e);
         }
@@ -160,7 +163,7 @@ public class QuoteDao implements CrudRepository<Quote, String> {
         if (ticker == null) {
             throw new IllegalArgumentException("ID can't be null");
         }
-        String query = "DELETE FROM " + TABLE_NAME + "WHERE " + ID_COLUMN_NAME + " =?";
+        String query = "DELETE FROM " + TABLE_NAME + " WHERE " + ID_COLUMN_NAME + " =?";
         jdbcTemplate.update(query, ticker);
     }
 
