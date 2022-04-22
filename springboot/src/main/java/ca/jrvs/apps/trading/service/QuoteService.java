@@ -47,8 +47,10 @@ public class QuoteService {
     }
 
     /**
-     * Helper method. Map an IexQuote to a Quote entity Note: `iexQuote.getLatestPrice() == null if
-     * the stock market is close. Make sure set a default value for number fields(s).
+     * Helper method.
+     * Map an IexQuote to a Quote entity
+     * Note: `iexQuote.getLatestPrice() == null if the stock market is close.
+     * Make sure set a default value for number fields(s).
      */
     protected static Quote buildQuoteFromIexQuote(IexQuote iexQuote) {
         Quote quote = new Quote();
@@ -62,8 +64,10 @@ public class QuoteService {
     }
 
     /**
-     * Validate (against IEX) and save given tickers to quote table - Get iexQuote(s) - convert each
-     * iexQuote to Quote entity - persist the quote to db
+     * Validate (against IEX) and save given tickers to quote table
+     * - Get iexQuote(s)
+     * - convert each iexQuote to Quote entity
+     * - persist the quote to db
      *
      * @param tickers a list of tickers/symbols
      * @throws IllegalArgumentException if ticker is not found from IEX
