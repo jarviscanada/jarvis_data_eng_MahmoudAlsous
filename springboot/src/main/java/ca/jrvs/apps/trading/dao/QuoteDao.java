@@ -65,8 +65,7 @@ public class QuoteDao implements CrudRepository<Quote, String> {
      * helper method that updates one quote
      */
     private int updateOne(Quote quote) {
-        String update_sql = "UPDATE quote SET last_price=?, bid_price=?,"
-                + " bid_size=?, ask_price=?, ask_size=? WHERE ticker=?";
+        String update_sql = "UPDATE quote SET last_price=?, bid_price=?, bid_size=?, ask_price=?, ask_size=? WHERE ticker=?";
 
         return jdbcTemplate.update(update_sql, makeUpdateValues(quote));
     }
@@ -140,13 +139,9 @@ public class QuoteDao implements CrudRepository<Quote, String> {
     @Override
     public List<Quote> findAll() {
         String query = "SELECT * FROM " + TABLE_NAME;
-        List<Quote> quoteList = new ArrayList<>();
         try {
             List<Quote> quotes = jdbcTemplate.query(query, BeanPropertyRowMapper.newInstance(Quote.class));
-            for(Quote quote:quotes){
-                quoteList.add(quote);
-            }
-            return quoteList;
+            return quotes;
         } catch (DataAccessException e) {
             throw new DataRetrievalFailureException("Can not get the value from database", e);
         }

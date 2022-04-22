@@ -57,6 +57,7 @@ public class QuoteService {
         quote.setBidSize(iexQuote.getIexBidSize());
         quote.setAskPrice(iexQuote.getIexAskPrice());
         quote.setAskSize(iexQuote.getIexAskSize());
+        quote.setLastPrice(iexQuote.getLatestPrice());
         return quote;
     }
 

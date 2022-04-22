@@ -95,12 +95,11 @@ public class QuoteDaoIntTest {
         quoteList.add(savedQuote);
         quoteDao.saveAll(quoteList);
         List<Quote> returnQuote = (List<Quote>) quoteDao.findAll();
-        assertEquals(returnQuote, quoteList);
 
-        /*for(int i = 0;i < returnQuote.size();i++){
+        for(int i = 0;i < returnQuote.size();i++){
             System.out.println(returnQuote.get(i).getId() + " " + quoteList.get(i).getId());
             assertEquals(returnQuote.get(i).getId(), quoteList.get(i).getId());
-        }*/
+        }
 
     }
 
