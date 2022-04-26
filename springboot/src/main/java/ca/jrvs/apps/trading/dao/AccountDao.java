@@ -60,14 +60,12 @@ public class AccountDao extends JdbcCrudDao<Account> {
                 account.getAmount(),
                 account.getId()
         };
-
         return fields;
     }
 
     @Override
     public int updateOne(Account account) {
-        String updateSql =
-                "UPDATE " + getTableName() + " SET trader_id=?, amount=? WHERE " + getIdColumnName()
+        String updateSql = "UPDATE " + getTableName() + " SET trader_id=?, amount=? WHERE " + getIdColumnName()
                         + " =?";
         return jdbcTemplate.update(updateSql, makeUpdateValues(account));
     }
