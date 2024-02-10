@@ -31,14 +31,15 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng_MahmoudAls
 
 ## Professional Experiences
 
-**Software Developer, Jarvis (2022-present)**: Implemented multiple applications using the Agile methodology. Participated in organizing and leading daily scrum meetings with the development team as well as scrum retrospective meetings to go over the last scrum period and how to improve on the project. Throughout the development process, I used Java, Linux, Docker, SQL, and bash scripts to complete the projects. I was able to gain some team collaboration skills through using the scrum boards when managing the sprint backlogs. I was able to utilize and improve my problem-solving skills by working on the tasks and coding challenges that are part of the projects. Most importantly, the development process ensured that I learned the core concepts of every technical aspect of the assignments, and I was able to use my prior experience to help me complete the tasks.
+**Software Developer, Jarvis (Feb 2022 - June 2022)**: Implemented multiple applications using the Agile methodology. Participated in organizing and leading daily scrum meetings with the development team as well as scrum retrospective meetings to go over the last scrum period and how to improve on the project. Throughout the development process, I used Java, Linux, Docker, SQL, and bash scripts to complete the projects. I was able to gain some team collaboration skills through using the scrum boards when managing the sprint backlogs. I was able to utilize and improve my problem-solving skills by working on the tasks and coding challenges that are part of the projects. Most importantly, the development process ensured that I learned the core concepts of every technical aspect of the assignments, and I was able to use my prior experience to help me complete the tasks.
+
+**Software Developer, Teranet Inc. (June 2022 - Present)**: Worked on User Management and Authority Management for a nation-wide web-based management system that allows market participants to file, manage, and search for information on capital markets in Canada. Used Java to program the functionality behind business requirements provided by Business Analysts. Built an Oracle Unified Directory Interface to authenticate, support, and manage user passwords according to the OUD’s password policy. Created an external query framework that collects parameters which filter data and executes SQL logic that queries the database to obtain the data required. Trained newly hired developers in security and authority management and brought them up to speed on our processes and development work cycle. 
 
 
 ## Education
 **Carleton University (2017-2021)**, Bachelor of Engineering (Computer Systems Engineering), Computer Engineering
 - Entrance Scholarship
 - Dean's Honour List (2020, 2021): Obtained a GPA over 10.0(3.7).
-- GPA: 3.0/4.0
 
 
 ## Miscellaneous
