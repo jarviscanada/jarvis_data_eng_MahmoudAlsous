@@ -1,6 +1,6 @@
 # Mahmoud Al Sous . Jarvis Consulting
 
-I am a Computer Systems Engineering graduate from Carleton University looking to pursue my career in software development engineering. During my academics, I studied data structures, algorithms, computer architecture, and obtained strong programming skills with languages such as Java, Python, and C/C++. Currently, I am working with Jarvis as a Software Developer, where I further improve my skills and work with new technological applications. I am fascinated by the ever-changing software industry because it allows us to fix problems that impact our society for the better, and I would like to use my problem-solving skills to be involved in projects that improve our software systems.
+I am a Software Developer at Teranet Inc and a Computer Systems Engineering Graduate. During my academics, I studied data structures, algorithms, computer architecture, and obtained strong programming skills with languages such as Java, Python, and C/C++. Currently, I am working on User Management and Authority Management for the SEDAR+ project which is a nation-wide web-based management system that allows market participants to file, manage, and search for information on capital markets in Canada. I work with Java, Spring, and OUD in my day-to-day activities to drive features from business requirements to functional services for the project.
 
 ## Skills
 
@@ -39,7 +39,7 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng_MahmoudAls
 ## Education
 **Carleton University (2017-2021)**, Bachelor of Engineering (Computer Systems Engineering), Computer Engineering
 - Entrance Scholarship
-- Dean's Honour List (2020, 2021): Obtained a GPA over 10.0(3.7).
+- Dean's Honour List (2020, 2021): Obtained a GPA over 10.0(3.7/4.0).
 
 
 ## Miscellaneous
