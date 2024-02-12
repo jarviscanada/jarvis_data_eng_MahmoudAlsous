@@ -5,7 +5,7 @@ github_repo_root_url: https://github.com/jarviscanada/jarvis_data_eng_MahmoudAls
 
 # Introduce yourself, your academic and, professional background.
 # What excites you about the software industry and your passion. At least 80 words
-summary: I am a Computer Systems Engineering graduate from Carleton University looking to pursue my career in software development engineering. During my academics, I studied data structures, algorithms, computer architecture, and obtained strong programming skills with languages such as Java, Python, and C/C++. Currently, I am working with Jarvis as a Software Developer, where I further improve my skills and work with new technological applications. I am fascinated by the ever-changing software industry because it allows us to fix problems that impact our society for the better, and I would like to use my problem-solving skills to be involved in projects that improve our software systems.
+summary: I am a Software Developer at Teranet Inc and a Computer Systems Engineering Graduate. During my academics, I studied data structures, algorithms, computer architecture, and obtained strong programming skills with languages such as Java, Python, and C/C++. Currently, I am working on User Management and Authority Management for the SEDAR+ project which is a nation-wide web-based management system that allows market participants to file, manage, and search for information on capital markets in Canada. I work with Java, Spring, and OUD in my day-to-day activities to drive features from business requirements to functional services for the project.
 
 # Group your skills by level.
 # Your skills can be anything software related (e.g. language, frameworks, methodologies, software, etc.).
@@ -65,13 +65,13 @@ professional_experience:
   #Write your Jarvis role as a professional experience rather than training.
   - title: "Software Developer"
     company: "Jarvis"
-    duration: "2022-present"
+    duration: "Feb 2022 - June 2022"
     # The project description must start with an action verb (https://bit.ly/3guO98u)
     description: "Implemented multiple applications using the Agile methodology. Participated in organizing and leading daily scrum meetings with the development team as well as scrum retrospective meetings to go over the last scrum period and how to improve on the project. Throughout the development process, I used Java, Linux, Docker, SQL, and bash scripts to complete the projects. I was able to gain some team collaboration skills through using the scrum boards when managing the sprint backlogs. I was able to utilize and improve my problem-solving skills by working on the tasks and coding challenges that are part of the projects. Most importantly, the development process ensured that I learned the core concepts of every technical aspect of the assignments, and I was able to use my prior experience to help me complete the tasks."
-  #- title: "Tutor"
-    #company: "XYZ Company"
-    #duration: "2019"
-    #description: "Donec mattis sed justo et sagittis. Vestibulum lacinia nulla ipsum. Curabitur imperdiet nibh vitae leo lacinia laoreet. Nullam accumsan, lectus ut maximus ultricies, augue justo egestas mi, vel bibendum felis."
+  - title: "Software Developer"
+    company: "Teranet Inc."
+    duration: "June 2022 - Present"
+    description: "Worked on User Management and Authority Management for a nation-wide web-based management system that allows market participants to file, manage, and search for information on capital markets in Canada. Used Java to program the functionality behind business requirements provided by Business Analysts. Built an Oracle Unified Directory Interface to authenticate, support, and manage user passwords according to the OUD’s password policy. Created an external query framework that collects parameters which filter data and executes SQL logic that queries the database to obtain the data required. Trained newly hired developers in security and authority management and brought them up to speed on our processes and development work cycle."
 
 #List of edcuation
 education: 
@@ -82,8 +82,7 @@ education:
     # optional
     awards_achievements: 
       - "Entrance Scholarship"
-      - "Dean's Honour List (2020, 2021): Obtained a GPA over 10.0(3.7)."
-      - "GPA: 3.0/4.0"
+      - "Dean's Honour List (2020, 2021): Obtained a GPA over 10.0(3.7/4.0)."
 
 #Optional section
 others:
